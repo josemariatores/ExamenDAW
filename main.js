@@ -59,7 +59,7 @@ document.getElementsByClassName
 
 const numLetras = (escrito, num_letras) => {
     escrito = escrito.split(" ");
-    for(x = 0; x<escrito.length;x++){
+    for(x = 0; x < escrito.length;x++){
         if(!escrito[x].length > 0){
             escrito.splice(x, 1);
             
