@@ -58,50 +58,17 @@ const letras = document.getElementsByTagName('input').item(0);
 
 const numLetras = (escrito, num_letras) => {
     escrito = escrito.split(" ");
-    for(x = 0; x < escrito.length;x++){
-        if(!escrito[x].length > 0){
+    for (x = 0; x < escrito.length; x++) {
+        if (!escrito[x].length > 0) {
             escrito.splice(x, 1);
-            
+
         }
     }
-    escrito = escrito.splice(0,num_letras).join(" ");
+    escrito = escrito.splice(0, num_letras).join(" ");
     text.textContent = escrito;
 }
 
 letras.setAttribute('onfocusout', 'numLetras(text0, letras.value)');
-
-//3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //5
 
@@ -110,7 +77,7 @@ const edad = document.getElementsByTagName('input').item(2);
 let botonJson = document.getElementsByTagName('button').item(1);
 const json = document.getElementById('json-result');
 
-botonJson.setAttribute('onclick', 'conversor()');
+botonJson.setAttribute('onclick', 'conversor()','validar()');
 
 const conversor = () => {
     const jJson = {
@@ -120,4 +87,11 @@ const conversor = () => {
     console.log(jJson);
     json.textContent = JSON.stringify(jJson);
 }
-
+Edad1=edad;
+function validar() {
+    if (Edad1 < 18) {
+        alert("Debe ser mayor de 18 años.")
+        document.Edad1.focus()
+        return 0;
+    }
+}
