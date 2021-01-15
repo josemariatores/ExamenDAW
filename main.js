@@ -1,20 +1,26 @@
 
 //Json
-//const nombre = document.getElementsByTagName('input').item(1);
-//const edad = document.getElementsByTagName('input').item(2);
-//let btn = document.getElementsByTagName('button').item(1);
-//const json = document.getElementById('json-result');
+const nombre = document.getElementsByTagName('input').item(1);
+const edad = document.getElementsByTagName('input').item(2);
+let btn = document.getElementsByTagName('button').item(1);
+const json = document.getElementById('json-result');
 
-//btn.setAttribute('onclick', 'convertir()');
+btn.setAttribute('onclick', 'fJson()');
 
-//const convertir = () => {
-    //const s = {
-        //nombre: nombre.value,
-      //  edad: edad.value
-    //};
-    //console.log(s);
-  //  json.textContent = JSON.stringify(s);
-//}
+const fJson = () => {
+    const btnJson = {
+        nombre: nombre.value,
+        edad: edad.value
+    };
+    console.log(btnJson);
+    json.textContent = JSON.stringify(btnJson);
+}
+
+
+
+
+
+
 
 
 
@@ -73,8 +79,24 @@ const contadorDiv = (div) => {
             count++;
         }
     }
-    document.getElementById('buttons-container').appendChild(boton2);
+    document.getElementById('buttons-container').appendChild(boton1);
 
     return count;
 
 }
+const contar = () => {
+    
+    if(!newDiv.contains(newSpan)){
+        newDiv.appendChild(newSpan);
+      }
+    newSpan.textContent = contadorDiv(text);
+}
+
+boton.setAttribute('onclick', 'contar()');
+
+const removeSpan = () =>{
+    if(newDiv.contains(newSpan)){
+    newDiv.removeChild(newSpan);
+    }
+    }
+boton1.setAttribute('onclick', 'removeSpan()');
