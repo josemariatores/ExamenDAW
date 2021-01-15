@@ -45,13 +45,14 @@ const contar = () => {
 
 boton.setAttribute('onclick', 'contar()');
 
-const removeSpan = () => {
+const deleteSpan = () => {
     if (newDiv.contains(newSpan)) {
         newDiv.removeChild(newSpan);
     }
 }
-boton1.setAttribute('onclick', 'removeSpan()');
-//2 tiene que contar apalabras no letras
+boton1.setAttribute('onclick', 'deleteSpan()');
+//2 tiene que contar letras no palabras la funcion nos saca el texto hasta el numero de palabras solicitado y debe sacar palabras con el numero de letras mayor al puesto
+
 const letras = document.getElementsByTagName('input').item(0);
 document.getElementsByClassName
 
