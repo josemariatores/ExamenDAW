@@ -52,10 +52,9 @@ const deleteSpan = () => {
 }
 boton1.setAttribute('onclick', 'deleteSpan()');
 
-//2 tiene que conta letras no palabras la funcion nos saca el texto hasta el numero de palabras solicitado y debe sacar palabras con el numero de letras mayor al puesto
+//2 tiene que contar letras no palabras la funcion nos saca el texto hasta el numero de palabras solicitado y debe sacar palabras con el numero de letras mayor al puesto
 
 const letras = document.getElementsByTagName('input').item(0);
-document.getElementsByClassName
 
 const numLetras = (escrito, num_letras) => {
     escrito = escrito.split(" ");
