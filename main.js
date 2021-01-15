@@ -1,9 +1,9 @@
-
+//1
 const boton = document.createElement('button');
 
 document.getElementById('buttons-container').appendChild(boton);
 
-boton.innerHTML = "Contar palabras";
+boton.innerHTML = "sumar palabras";
 
 const boton1 = document.createElement('button');
 boton1.innerHTML = "Restablecer";
@@ -20,7 +20,7 @@ const text = document.getElementsByClassName('text-container').item(0);
 
 const text0 = document.getElementsByClassName('text-container').item(0).textContent;
 
-const contadorDiv = (div) => {
+const sumarDiv = (div) => {
     let count = 0;
     const text = div.textContent.replace(',', '');
     const textContent = text.replace('.', '');
@@ -35,15 +35,15 @@ const contadorDiv = (div) => {
     return count;
 
 }
-const contar = () => {
+const sumar = () => {
 
     if (!newDiv.contains(newSpan)) {
         newDiv.appendChild(newSpan);
     }
-    newSpan.textContent = contadorDiv(text);
+    newSpan.textContent = sumarDiv(text);
 }
 
-boton.setAttribute('onclick', 'contar()');
+boton.setAttribute('onclick', 'sumar()');
 
 const deleteSpan = () => {
     if (newDiv.contains(newSpan)) {
@@ -51,7 +51,8 @@ const deleteSpan = () => {
     }
 }
 boton1.setAttribute('onclick', 'deleteSpan()');
-//2 tiene que contar letras no palabras la funcion nos saca el texto hasta el numero de palabras solicitado y debe sacar palabras con el numero de letras mayor al puesto
+
+//2 tiene que conta letras no palabras la funcion nos saca el texto hasta el numero de palabras solicitado y debe sacar palabras con el numero de letras mayor al puesto
 
 const letras = document.getElementsByTagName('input').item(0);
 document.getElementsByClassName
@@ -67,8 +68,6 @@ const numLetras = (escrito, num_letras) => {
     escrito = escrito.splice(0,num_letras).join(" ");
     text.textContent = escrito;
 }
-
-
 
 letras.setAttribute('onfocusout', 'numLetras(text0, letras.value)');
 
@@ -109,10 +108,10 @@ letras.setAttribute('onfocusout', 'numLetras(text0, letras.value)');
 
 const nombre = document.getElementsByTagName('input').item(1);
 const edad = document.getElementsByTagName('input').item(2);
-let btn = document.getElementsByTagName('button').item(1);
+let botonJson = document.getElementsByTagName('button').item(1);
 const json = document.getElementById('json-result');
 
-btn.setAttribute('onclick', 'conversor()');
+botonJson.setAttribute('onclick', 'conversor()');
 
 const conversor = () => {
     const jJson = {
