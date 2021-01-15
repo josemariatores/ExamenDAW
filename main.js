@@ -25,8 +25,8 @@ const contadorDiv = (div) => {
     const text = div.textContent.replace(',', '');
     const textContent = text.replace('.', '');
     const words = textContent.split(' ');
-    for (let i = 0; i < words.length; i++) {
-        if (words[i].length > 0) {
+    for (let x = 0; x < words.length; x++) {
+        if (words[x].length > 0) {
             count++;
         }
     }
@@ -51,23 +51,27 @@ const removeSpan = () => {
     }
 }
 boton1.setAttribute('onclick', 'removeSpan()');
-//2
+//2 tiene que contar apalabras no letras
 const letras = document.getElementsByTagName('input').item(0);
 document.getElementsByClassName
 
-const longitud = (texto, num_letras) => {
-    texto = texto.split(" ");
-    for (i = 0; i < texto.length; i++) {
-        if (!texto[i].length > 0) {
-            texto.splice(i, 1);
-
+const numLetras = (escrito, num_letras) => {
+    escrito = escrito.split(" ");
+    for(x = 0; x<escrito.length;x++){
+        if(!escrito[x].length > 0){
+            escrito.splice(x, 1);
+            
         }
     }
-    texto = texto.splice(0, num_letras).join(" ");
-    text.textContent = texto;
+    escrito = escrito.splice(0,num_letras).join(" ");
+    text.textContent = escrito;
 }
 
-letras.setAttribute('onfocusout', 'longitud(text0, letras.value)');
+
+
+letras.setAttribute('onfocusout', 'numLetras(text0, letras.value)');
+
+//3
 
 
 
@@ -98,7 +102,9 @@ letras.setAttribute('onfocusout', 'longitud(text0, letras.value)');
 
 
 
-//json no funcion
+
+
+//5
 
 const nombre = document.getElementsByTagName('input').item(1);
 const edad = document.getElementsByTagName('input').item(2);
